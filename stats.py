@@ -7,7 +7,7 @@ from collections import namedtuple
 from ways import load_map_from_csv
 import math
 from ways.info import ROAD_TYPES
-
+from ways import got_99_problems
 
 def map_statistics(roads):
     '''return a dictionary containing the desired information
@@ -24,6 +24,7 @@ def map_statistics(roads):
         # value should be a dictionary
         # mapping each road_info.TYPE to the no' of links of this type
         'Link type histogram' : link_type_histogram(roads),  # tip: use collections.Counter
+        '100 problems' : got_99_problems.problem_maker(roads) #ERASE LATER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     }
 
 

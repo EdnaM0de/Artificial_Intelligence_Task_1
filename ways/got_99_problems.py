@@ -9,11 +9,11 @@ def problem_maker(roads):
         rand_index = randint(1, len(roads.junctions()))
         source_junction = roads.junctions()[rand_index]
 
-        if len(source_junction.link) == 0:
+        if len(source_junction.links) == 0:
             i -= 1
             continue
 
-        source_junction_link = randint(0, len(source_junction.links - 1))
+        source_junction_link = randint(0, len(source_junction.links) - 1)
         path_len = randint(2, 11)
         target_junction = roads.junctions()[source_junction.links[source_junction_link].target]
 
